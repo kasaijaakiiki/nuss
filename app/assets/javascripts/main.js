@@ -18,8 +18,8 @@ var egyptUrl = 'https://newsapi.org/v2/top-headlines?country=eg&apiKey=af0f865d4
 
 // Request News Function
 var getNews = async(url) => {
-  let response = await fetch(url);
-  let jsonResponse = await response.json();
+/*let*/  var response = await fetch(url);
+/*let */ var jsonResponse = await response.json();
   console.log(jsonResponse);
   let articlesArray = jsonResponse.articles.slice(0, 10);
   //console.log(articlesArray);
@@ -30,7 +30,7 @@ var getNews = async(url) => {
 
 function renderNews(articles) {
   articles.map((article, index) => {
-    let articleRow =
+/*let*/   var articleRow =
       '<div class="articlerow">' +
       ' <div class="article">' +
       '   <h2 class="title">' + article.title + '</h2>' +
@@ -53,7 +53,7 @@ function renderNews(articles) {
 // Post Tweet Function
 
 function sendTweets(newsObjects) {
-  let tweetButtons = document.getElementsByClassName('tweet');
+/*let */  var tweetButtons = document.getElementsByClassName('tweet');
   for (let i = 0; i < tweetButtons.length; i++) {
     tweetButtons[i].addEventListener('click', function() {
       // Call Post Status function here

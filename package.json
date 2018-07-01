@@ -1,7 +1,9 @@
 {
   "name": "nuus",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "konva": "^2.1.6"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
