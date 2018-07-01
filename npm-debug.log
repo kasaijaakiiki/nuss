@@ -1,0 +1,136 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'babel', '-g' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData babel
+8 silly fetchNamedPackageData babel
+9 silly mapToRegistry name babel
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/babel
+13 verbose request uri https://registry.npmjs.org/babel
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 1:02:15 PM
+16 verbose request id 94ba80b16231f6ab
+17 http request GET https://registry.npmjs.org/babel
+18 http 200 https://registry.npmjs.org/babel
+19 verbose headers { date: 'Sun, 01 Jul 2018 17:02:15 GMT',
+19 verbose headers   'content-type': 'application/json; charset=UTF-8',
+19 verbose headers   'transfer-encoding': 'chunked',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'set-cookie': [ '__cfduid=db78a60890fd3635d7e6ae94ee6cb0ee51530464535; expires=Mon, 01-Jul-19 17:02:15 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+19 verbose headers   'cache-control': 'max-age=300',
+19 verbose headers   'cf-cache-status': 'HIT',
+19 verbose headers   'cf-ray': '433a70716f259f48-IAD',
+19 verbose headers   etag: 'W/"dffa6c00f74dd795004a6c754a143a0a"',
+19 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+19 verbose headers   'last-modified': 'Sat, 26 May 2018 01:41:28 GMT',
+19 verbose headers   vary: 'accept-encoding, accept',
+19 verbose headers   server: 'cloudflare',
+19 verbose headers   'content-encoding': 'gzip' }
+20 silly get cb [ 200,
+20 silly get   { date: 'Sun, 01 Jul 2018 17:02:15 GMT',
+20 silly get     'content-type': 'application/json; charset=UTF-8',
+20 silly get     'transfer-encoding': 'chunked',
+20 silly get     connection: 'keep-alive',
+20 silly get     'set-cookie': [ '__cfduid=db78a60890fd3635d7e6ae94ee6cb0ee51530464535; expires=Mon, 01-Jul-19 17:02:15 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+20 silly get     'cache-control': 'max-age=300',
+20 silly get     'cf-cache-status': 'HIT',
+20 silly get     'cf-ray': '433a70716f259f48-IAD',
+20 silly get     etag: 'W/"dffa6c00f74dd795004a6c754a143a0a"',
+20 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 silly get     'last-modified': 'Sat, 26 May 2018 01:41:28 GMT',
+20 silly get     vary: 'accept-encoding, accept',
+20 silly get     server: 'cloudflare',
+20 silly get     'content-encoding': 'gzip' } ]
+21 verbose get saving babel to /home/kasaija/.npm/registry.npmjs.org/babel/.cache.json
+22 silly install normalizeTree
+23 silly loadCurrentTree Finishing
+24 silly loadIdealTree Starting
+25 silly install loadIdealTree
+26 silly cloneCurrentTree Starting
+27 silly install cloneCurrentTreeToIdealTree
+28 silly cloneCurrentTree Finishing
+29 silly loadShrinkwrap Starting
+30 silly install loadShrinkwrap
+31 silly loadShrinkwrap Finishing
+32 silly loadAllDepsIntoIdealTree Starting
+33 silly install loadAllDepsIntoIdealTree
+34 silly resolveWithNewModule babel@6.23.0 checking installable status
+35 silly cache add args [ 'babel', null ]
+36 verbose cache add spec babel
+37 silly cache add parsed spec Result {
+37 silly cache add   raw: 'babel',
+37 silly cache add   scope: null,
+37 silly cache add   name: 'babel',
+37 silly cache add   rawSpec: '',
+37 silly cache add   spec: 'latest',
+37 silly cache add   type: 'tag' }
+38 silly addNamed babel@latest
+39 verbose addNamed "latest" is being treated as a dist-tag for babel
+40 info addNameTag [ 'babel', 'latest' ]
+41 silly mapToRegistry name babel
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/babel
+45 verbose addNameTag registry:https://registry.npmjs.org/babel not in flight; fetching
+46 verbose get https://registry.npmjs.org/babel not expired, no request
+47 silly addNameTag next cb for babel with tag latest
+48 silly addNamed babel@6.23.0
+49 verbose addNamed "6.23.0" is a plain semver version for babel
+50 warn deprecated babel@6.23.0: In 6.x, the babel package has been deprecated in favor of babel-cli. Check https://opencollective.com/babel to support the Babel maintainers
+51 silly mapToRegistry name babel
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/babel
+55 verbose addRemoteTarball https://registry.npmjs.org/babel/-/babel-6.23.0.tgz not in flight; adding
+56 verbose addRemoteTarball [ 'https://registry.npmjs.org/babel/-/babel-6.23.0.tgz',
+56 verbose addRemoteTarball   'd0d1e7d803e974765beea3232d4e153c0efb90f4' ]
+57 info retry fetch attempt 1 at 1:02:15 PM
+58 info attempt registry request try #1 at 1:02:15 PM
+59 http fetch GET https://registry.npmjs.org/babel/-/babel-6.23.0.tgz
+60 http fetch 200 https://registry.npmjs.org/babel/-/babel-6.23.0.tgz
+61 silly fetchAndShaCheck shasum d0d1e7d803e974765beea3232d4e153c0efb90f4
+62 verbose addTmpTarball /tmp/npm-23258-3cfa5614/registry.npmjs.org/babel/-/babel-6.23.0.tgz not in flight; adding
+63 verbose addTmpTarball already have metadata; skipping unpack for babel@6.23.0
+64 silly cache afterAdd babel@6.23.0
+65 verbose afterAdd /home/kasaija/.npm/babel/6.23.0/package/package.json not in flight; writing
+66 verbose afterAdd /home/kasaija/.npm/babel/6.23.0/package/package.json written
+67 silly loadAllDepsIntoIdealTree Finishing
+68 silly idealTree:prePrune lib
+68 silly idealTree:prePrune └── babel@6.23.0
+69 silly loadIdealTree Finishing
+70 silly currentTree lib
+71 silly idealTree lib
+71 silly idealTree └── babel@6.23.0
+72 silly generateActionsToTake Starting
+73 silly install generateActionsToTake
+74 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+75 silly rollbackFailedOptional Starting
+76 silly rollbackFailedOptional Finishing
+77 silly runTopLevelLifecycles Starting
+78 silly runTopLevelLifecycles Finishing
+79 silly install printInstalled
+80 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+80 verbose stack     at Error (native)
+81 verbose cwd /home/kasaija/Documents/RailsCode/nuus
+82 error Linux 4.13.0-45-generic
+83 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "babel" "-g"
+84 error node v4.2.6
+85 error npm  v3.5.2
+86 error path /usr/local/lib/node_modules
+87 error code EACCES
+88 error errno -13
+89 error syscall access
+90 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+90 error     at Error (native)
+90 error  { [Error: EACCES: permission denied, access '/usr/local/lib/node_modules']
+90 error   errno: -13,
+90 error   code: 'EACCES',
+90 error   syscall: 'access',
+90 error   path: '/usr/local/lib/node_modules' }
+91 error Please try running this command again as root/Administrator.
+92 verbose exit [ -13, true ]
