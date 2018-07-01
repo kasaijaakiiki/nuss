@@ -10,7 +10,7 @@ var baseUrl = 'https://api.twitter.com/1.1/statuses/update.json';
 
 // Post Status Function
 Twitter.postStatus = async (status) => {
-  let response = await fetch(`https://cors-anywhere.herokuapp.com/${baseUrl}?status=${encodeData(status)}`, {
+ let response = await fetch(`https://cors-anywhere.herokuapp.com/${baseUrl}?status=${encodeData(status)}`, {
    method: 'POST',
    headers: {
             Authorization: Twitter.generateAuthorizationHeader(status)
