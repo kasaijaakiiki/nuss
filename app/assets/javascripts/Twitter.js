@@ -1,12 +1,12 @@
-const Twitter = {};
+var Twitter = {};
 
-const oauthConsumerKey = 'HYiaQJNWn619S9rjMvjYLYxmK'; // Generated from apps.twitter.com
-const oauthConsumerSecret = 'sAaDk1kl2E7Dzq6JJYviInvlzSHRb9fq1xNP13SZQg2FkHzimq'; // Generated from Keys and Access Tokens on apps.twitter.com
-const oauthToken = '153498117-DiuiTcdSrdPta1tu2Xsl5xua7HAm8fbkSPjA2ljF'; // Generated from Keys and Access Tokens on apps.twitter.com
-const oauthTokenSecret = 'HkbOPWXQQwCO92YtiA0aKfvrGYEyG1AuyOP3StzbNNN2k'; // Generated from Keys and Access Tokens on apps.twitter.com
-const oauthSignatureMethod = 'HMAC-SHA1';
-const oauthVersion = '1.0';
-const baseUrl = 'https://api.twitter.com/1.1/statuses/update.json';
+var oauthConsumerKey = 'HYiaQJNWn619S9rjMvjYLYxmK'; // Generated from apps.twitter.com
+var oauthConsumerSecret = 'sAaDk1kl2E7Dzq6JJYviInvlzSHRb9fq1xNP13SZQg2FkHzimq'; // Generated from Keys and Access Tokens on apps.twitter.com
+var oauthToken = '153498117-DiuiTcdSrdPta1tu2Xsl5xua7HAm8fbkSPjA2ljF'; // Generated from Keys and Access Tokens on apps.twitter.com
+var oauthTokenSecret = 'HkbOPWXQQwCO92YtiA0aKfvrGYEyG1AuyOP3StzbNNN2k'; // Generated from Keys and Access Tokens on apps.twitter.com
+var oauthSignatureMethod = 'HMAC-SHA1';
+var oauthVersion = '1.0';
+var baseUrl = 'https://api.twitter.com/1.1/statuses/update.json';
 
 // Post Status Function
 Twitter.postStatus = async (status) => {
@@ -24,9 +24,9 @@ Twitter.postStatus = async (status) => {
 // Helper Functions
 
 Twitter.generateAuthorizationHeader = (status) => {
-  const oauthNonce = generateNonce();
-  const oauthTimestamp = Math.floor((new Date()).getTime() / 1000);
-  const oauthSignature = generatePostSignature(status, baseUrl, oauthNonce, oauthTimestamp);
+  var oauthNonce = generateNonce();
+  var oauthTimestamp = Math.floor((new Date()).getTime() / 1000);
+  var oauthSignature = generatePostSignature(status, baseUrl, oauthNonce, oauthTimestamp);
 
   let authorizationHeader = `Oauth oauth_consumer_key="${encodeData(oauthConsumerKey)}", oauth_nonce="${encodeData(oauthNonce)}", oauth_signature="${encodeData(oauthSignature)}", oauth_signature_method="${encodeData(oauthSignatureMethod)}", oauth_timestamp="${encodeData(oauthTimestamp)}", oauth_token="${encodeData(oauthToken)}", oauth_version="${encodeData(oauthVersion)}"`;
 
@@ -40,7 +40,7 @@ NONCE_CHARS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
   '4', '5', '6', '7', '8', '9'
 ];
 
-const generateNonce = () => {
+var generateNonce = () => {
   var result = [];
   var chars = NONCE_CHARS;
   var char_pos;
@@ -53,15 +53,15 @@ const generateNonce = () => {
   return result.join('');
 };
 
-const generatePostSignature = (status, url, oauthNonce, oauthTimestamp) => {
-  const parameterString = `oauth_consumer_key=${encodeData(oauthConsumerKey)}&oauth_nonce=${encodeData(oauthNonce)}&oauth_signature_method=HMAC-SHA1&oauth_timestamp=${encodeData(oauthTimestamp)}&oauth_token=${encodeData(oauthToken)}&oauth_version=1.0&status=${encodeData(status)}`;
-  const signatureBase = `POST&${encodeData(url)}&${encodeData(parameterString)}`;
-  const signingKey = `${encodeData(oauthConsumerSecret)}&${encodeData(oauthTokenSecret)}`;
+var generatePostSignature = (status, url, oauthNonce, oauthTimestamp) => {
+  var parameterString = `oauth_consumer_key=${encodeData(oauthConsumerKey)}&oauth_nonce=${encodeData(oauthNonce)}&oauth_signature_method=HMAC-SHA1&oauth_timestamp=${encodeData(oauthTimestamp)}&oauth_token=${encodeData(oauthToken)}&oauth_version=1.0&status=${encodeData(status)}`;
+  var signatureBase = `POST&${encodeData(url)}&${encodeData(parameterString)}`;
+  var signingKey = `${encodeData(oauthConsumerSecret)}&${encodeData(oauthTokenSecret)}`;
 
   return HMACSHA1(signingKey, signatureBase);
 };
 
-const encodeData = (toEncode) => {
+var encodeData = (toEncode) => {
   if (toEncode == null || toEncode == "") return "";
   else {
     var result = encodeURIComponent(toEncode);

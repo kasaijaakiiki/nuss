@@ -302,7 +302,7 @@ function sha1_ft(t, b, c, d)
 }
 
 /*
- * Determine the appropriate additive constant for the current iteration
+ * Determine the appropriate additive varant for the current iteration
  */
 function sha1_kt(t)
 {
@@ -329,6 +329,6 @@ function bit_rol(num, cnt)
   return (num << cnt) | (num >>> (32 - cnt));
 }
 
-const HMACSHA1= function(key, data) {
+var HMACSHA1= function(key, data) {
   return b64_hmac_sha1(key, data);
 }
