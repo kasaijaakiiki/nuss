@@ -14,7 +14,7 @@ Twitter.postStatus = async (status) => {
    method: 'POST',
    headers: {
             Authorization: Twitter.generateAuthorizationHeader(status)
-       }
+       },
    let jsonResponse = await response.json();
    console.log(jsonResponse);
    return jsonResponse;
