@@ -1,5 +1,9 @@
 {
   "name": "nuus",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1"
+  }
 }
