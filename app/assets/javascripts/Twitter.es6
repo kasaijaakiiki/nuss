@@ -10,12 +10,12 @@ var baseUrl = 'https://api.twitter.com/1.1/statuses/update.json';
 
 // Post Status Function
 Twitter.postStatus = async (status) => {
-/*let */ var response = await fetch(`https://cors-anywhere.herokuapp.com/${baseUrl}?status=${encodeData(status)}`, {
+  let response = await fetch(`https://cors-anywhere.herokuapp.com/${baseUrl}?status=${encodeData(status)}`, {
    method: 'POST',
    headers: {
             Authorization: Twitter.generateAuthorizationHeader(status)
        }
-/* let */   var jsonResponse = await response.json();
+   let jsonResponse = await response.json();
    console.log(jsonResponse);
    return jsonResponse;
  });
@@ -28,7 +28,7 @@ Twitter.generateAuthorizationHeader = (status) => {
   var oauthTimestamp = Math.floor((new Date()).getTime() / 1000);
   var oauthSignature = generatePostSignature(status, baseUrl, oauthNonce, oauthTimestamp);
 
-/*let*/  var authorizationHeader = `Oauth oauth_consumer_key="${encodeData(oauthConsumerKey)}", oauth_nonce="${encodeData(oauthNonce)}", oauth_signature="${encodeData(oauthSignature)}", oauth_signature_method="${encodeData(oauthSignatureMethod)}", oauth_timestamp="${encodeData(oauthTimestamp)}", oauth_token="${encodeData(oauthToken)}", oauth_version="${encodeData(oauthVersion)}"`;
+let authorizationHeader = `Oauth oauth_consumer_key="${encodeData(oauthConsumerKey)}", oauth_nonce="${encodeData(oauthNonce)}", oauth_signature="${encodeData(oauthSignature)}", oauth_signature_method="${encodeData(oauthSignatureMethod)}", oauth_timestamp="${encodeData(oauthTimestamp)}", oauth_token="${encodeData(oauthToken)}", oauth_version="${encodeData(oauthVersion)}"`;
 
   return authorizationHeader;
 };
