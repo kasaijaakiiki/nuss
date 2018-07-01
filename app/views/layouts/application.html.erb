@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nuus</title>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/map-style.css" />
+	<script src="assets/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/level-1-config.js" type="text/javascript"></script>
+	<script src="assets/level-2-config.js" type="text/javascript"></script>
+	<script src="assets/jmap-interact.js" type="text/javascript"></script>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+ <div class="footer" class="nav navbar-nav">
+  <div class="container">
+     <ul>
+        <li>&copy; 2018 africanews.africa, LLC </li> 
+        <a href="http://www.kugonza.com"><li class="pull-right">Kugonza Tech</li></a>
+        <a href="#"><li class="pull-right">Terms & Privacy</li></a>
+     </ul>
+   </div>
+ </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/Twitter.js"></script>
+  <script src="assets/sha1.js"></script>
+
+  </body>
+
+
+
+</html>
