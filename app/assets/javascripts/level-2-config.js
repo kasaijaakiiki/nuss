@@ -20,7 +20,7 @@ var config_01 = {
 		'overColor':'#3399ff',//color of the pin when mouse hover
 		'downColor':'#00ffff',//color of the pin when clicked 
 		//(trick, if you make this pin un-clickable > make the overColor and downColor the same)
-		'url':'http://africanews.africa/',//URL of this pin
+		'url':'http://algeriatimes.info/',//URL of this pin
 		'target':'same_window',//'new_window' opens URL in new window//'same_window' opens URL in the same window //'none' pin is not clickable
 		'enable':true,//true/false to enable/disable this pin
 	},
