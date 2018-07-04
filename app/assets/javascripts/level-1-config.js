@@ -11,7 +11,7 @@ var af_config = {
 		'upColor':'#EBECED',//country color when page loads
 		'overColor':'#99CC00',//country color when mouse hover
 		'downColor':'#993366',//country color when mouse clicking
-		'zoom':'yes',//zoom in to a detailed view 'no' or 'yes'
+		'zoom':'no',//zoom in to a detailed view 'no' or 'no'
 		'url':'http://algeriatimes.info/',//Goto URL
 		'target':'new_window',//open link in new window:new_window, open in current window:new_window, or none for nothing.
 		'id':'afc-01','iso':'iso_01',//PLEASE DON"T CHANGE THIS
