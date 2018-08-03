@@ -126,6 +126,21 @@ button:focus {
   padding-bottom: 3px;
 }
 
+#engadget:hover, #recode:hover, #nextWeb:hover, #egypt:hover {
+  border-bottom: solid 5px #130284;
+  padding-bottom: 3px;
+}
+
+
+.active {
+  border-bottom: solid 5px #130284;
+  padding-bottom: 3px;
+}
+
+
+
+
+
 @media (max-width: 640px) {
   .articlerow {
     display: flex;

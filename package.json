@@ -18,5 +18,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kasaijaivan/nuss.git"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }

@@ -23,6 +23,7 @@ gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
 gem 'sprockets', github: 'rails/sprockets', branch: 'master'
 gem 'babel-transpiler'
 
+gem 'bootstrap'
 gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
